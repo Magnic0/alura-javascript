@@ -18,8 +18,10 @@
 
 ## Operadores Aritméticos
 
-- `+, -` = Adição, Subtração;
+- `+, -` = Caracteres, respectivamente, de Adição e Subtração.
 
-- `*, /` = Multiplicação, Divisão;
+- `*, /` = Caracteres, respectivamente, de Multiplicação e Divisão.
 
-- `**` = Potenciação;
+- `**` = Caractere de Potenciação.
+
+- `<num> ** (1/<root>)` = Radiciação. Não existe caractere que a represente.
