@@ -1,2 +1,3 @@
-# alura-javascript
-Study repo, made to learn Javascript.
+# Description
+
+Study repo, made to learn Javascript at [Alura](https://alura.com.br/)
