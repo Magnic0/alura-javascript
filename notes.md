@@ -6,17 +6,25 @@
 
 # Javascript
 
-- **Javascript** é uma linguagem 'case sensitive', ou seja, é reconhecida a diferença entre letras maiúsculas e minúsculas. Ex.: o código `Console.log();` não funcionaria, pois começa em maiúsculo.
+- O **Javascript** é uma linguagem 'case sensitive', ou seja, é reconhecida a diferença entre letras maiúsculas e minúsculas. Ex.: o código `Console.log();` não funcionaria, pois começa em maiúsculo.
 
 ## Básico
 
 - `console.log()` = Imprime na tela o que quer que seja referenciado.
 
+- `//` = Adiciona um comentário.
+
+- `${expression}` = Feita para ser usado em *strings*, essa sintaxe concatena uma *string* com uma expressão qualquer (ex.: variáveis). É necessária a utilização de crase.
+
+## Variáveis
+
 - `var <varName> = <varValue>` = Declara uma variável. Variável são valores que podem ser alterados no futuro.
 
 - `const <constName> = <constValue>` = Declara uma constante. Constantes são valores fixos que não podem ser alterados ao longo do programa.
 
-- `//` = Adiciona um comentário.
+- `let <letName> = <letValue>` = Declara uma variável que só pode ser usada dentro do bloco em que foi declarada.
+
+- As `Var` e `Let` podem ser alteradas no futuro apenas mencionando o seu nome e declarando o seu novo valor. Ex.: `varName = false;`.
 
 ## Operadores Aritméticos
 
@@ -27,6 +35,8 @@
 - `**` = Caractere de Potenciação.
 
 - `<num> ** (1/<root>)` = Radiciação. Não existe caractere que a represente.
+
+- `==` = Sinal de equalidade.
 
 ## Conversão de tipos
 
