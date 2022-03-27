@@ -16,9 +16,9 @@
 
 ## Operadores Aritméticos
 
-- `+, -` = Caracteres, respectivamente, de Adição e Subtração.
+- `+`, `-` = Caracteres, respectivamente, de Adição e Subtração.
 
-- `*, /` = Caracteres, respectivamente, de Multiplicação e Divisão.
+- `*`, `/` = Caracteres, respectivamente, de Multiplicação e Divisão.
 
 - `**` = Caractere de Potenciação.
 
