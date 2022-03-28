@@ -49,7 +49,6 @@ console.log(6.5); // Float number
 */
 
 /* -5-
-
 console.log('Working with Variable Atribuition');
 const age = 29;
 const fName = 'Scarlet';
