@@ -26,6 +26,14 @@
 
 - As `Var` e `Let` podem ser alteradas no futuro apenas mencionando o seu nome e declarando o seu novo valor. Ex.: `varName = false;`.
 
+## Arrays
+
+Arrays são listas onde pode se guardar vários valores dentro de uma só variável. A declaração de *arrays* é similar a de variáveis, apenas sendo necessária adição da instrução `new Array()`, ex: `const list = new Array('exString', exVariable, exNum)`.
+
+- Arrays podem ser simplificados em sua declaração da seguinte forma: `const list = ['exString, 'exNum']`.
+
+- É possível selecionar um item específico no *array* através da instrução `arrayName[itemPlace]`.
+
 ## Operadores Aritméticos
 
 - `+`, `-` = Caracteres, respectivamente, de Adição e Subtração.
@@ -38,6 +46,12 @@
 
 - `==` = Sinal de equalidade.
 
+- `!=` = Sinal de diferença. 
+
+- `>` `<` = Maior e menor que.
+
+- `>=`, `<=` = Maior ou igual, menor ou igual.
+
 ## Conversão de tipos
 
 - `parseInt` = Converte um *string* para número inteiro.
@@ -47,3 +61,49 @@
 ## Funções
 
 - `function <fName>(parameter) {fContent}` = Cria uma função. Adicione as instruções entre as chaves, qualquer parametro recebido entra entre parênteses;
+
+## Operadores Lógicos.
+
+Os Operadores Lógicos são usados com operações com valores *boolean*, ou seja, `true` ou `false`. Os caracteres que representam os Operadores Lógicos são:
+
+- `&&` = Tem o mesmo papel da vírgula, serve para declarar mais de uma condição.
+
+- `||` = Informa que apenas uma das duas condições informadas devem ser consideradas. É um "*ou*", do Javascript.
+
+- `!` = Declara falsa uma condição, funciona como o "*não*" do Javascript.
+
+## Declarações Condicionais
+
+As Declarações condicionais são usadas para executar ações baseando-se na condição especificada. Veja um exemplo deste tipo de código:
+
+```
+if(ticket == true) {
+
+    if(age >= 18 || withParent == true){
+
+        console.log('Cities:' + cityList + '.');
+    } else {
+
+        console.log("Sorry, we can't sell packs for anyone under 18.");
+    }
+} else {
+
+    console.log('You need a ticket!');
+}
+```
+
+O código acima verifica se:
+
+1. O usuário comprou um bilhete (`if(ticket == true)`).
+
+2. O usuário é maior de 18 ou está acompanhado por alguém que é (`if(age >= 18 || withParent == true)`).
+
+E em seguida executa o código existente entre as `{}`. 
+
+As mais básicas sintaxes usadas em *if statements* são:
+
+- `if(condition) {script}` = Chama a operação *if* para conferir uma condição e executar um código que responda de acordo com a condição informada.
+
+- `} else {script}` = Executa um código caso a condição não esteja de acordo com a especificada.
+
+- `} else if(secondCondition) {script}` = É usado como contraponto ao `if`, no caso de uma segunda condição especificada.

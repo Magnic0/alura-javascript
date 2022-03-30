@@ -50,11 +50,62 @@ console.log(6.5); // Float number
 
 /* -5-
 console.log('Working with Variable Atribuition');
-const age = 29;
+var age; // declaring variable
+age = 29; // attributing value
+age++; // adding 1 to the current value
 const fName = 'Scarlet';
 const sName = 'Begonias';
 
 console.log(`My name is ${fName} ${sName}`); //attention in the backticles (`.`)
 
 // fName = fName + sName; // constant can't be changed
+*/
+
+/* -6-
+console.log('Working with arrays');
+
+const cityList = [
+    
+    ' Salvador',
+    ' São Paulo',
+    ' Rio de Janeiro'
+]
+
+cityList.push(' Curitiba'); // adding item on array
+cityList.splice(1,1); // removing item from array
+
+console.log('Cities:' + cityList + '.'); // printing array
+console.log('City:' + cityList[1]); // selecting a item from array
+*/
+
+/* -7-
+console.log('---Logic Operators---');
+console.log('');
+
+const age = 15;
+const withParent = false;
+const ticket = true;
+const cityList = [
+    
+    ' Salvador',
+    ' São Paulo',
+    ' Rio de Janeiro',
+    ' Curitiba'
+]
+
+if(ticket) {
+
+    if(age >= 18 || withParent == true){
+
+        console.log('Cities:' + cityList + '.');
+    } else {
+
+        console.log("Sorry, we can't sell packs for anyone under 18."); // *""* used 'cause *''* conflicts
+    }
+} else {
+
+    console.log('You need a ticket!');
+}
+
+console.log('');
 */
