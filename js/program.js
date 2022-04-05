@@ -109,3 +109,54 @@ if(ticket) {
 
 console.log('');
 */
+
+/* -8-
+console.log('\n---Loops---\n');
+
+const age = 18;
+const withParent = false;
+const ticket = false;
+const destination = ' Curitiba';
+const cityList = [
+    
+    ' Salvador',
+    ' São Paulo',
+    ' Rio de Janeiro',
+    ' Curitiba'
+]
+const canBuy = age >= 18 || withParent;
+
+console.log('Cities:' + cityList + '.\n');
+
+let destExist = false;
+
+let i = 0;
+while(i < 4) {
+
+    if(cityList[i] == destination) {
+
+        console.log("Completed!\n");
+        destExist = true;
+        break;
+    }
+    i++;
+} // The 'while' way.
+
+for(var i = 0; i < 4; i++) {
+
+    if(cityList[i] == destination) {
+
+        destExist = true;
+        break;
+    }
+} // The 'for' way.
+
+if(cityList[i] != destination) {
+
+    console.log("Sorry, we don't have this destination. Yet!\n");
+}
+
+if(canBuy && destExist) {
+
+    console.log("Have a nice trip!\n");
+}*/

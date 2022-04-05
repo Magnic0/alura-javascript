@@ -107,3 +107,34 @@ As mais básicas sintaxes usadas em *if statements* são:
 - `} else {script}` = Executa um código caso a condição não esteja de acordo com a especificada.
 
 - `} else if(secondCondition) {script}` = É usado como contraponto ao `if`, no caso de uma segunda condição especificada.
+
+## Loops
+
+Loops oferecem a possibilidade de realizar uma ação repetidamente, de forma fácil e rápida.
+Utiliza-se uma estrutura parecida com a das **Declarações Condicionais**: uma condição especificada e um código a ser executado caso aquela condição retorne `true`. Porém nesse caso, o código será executado repetidamente até a condição retornar `false`.
+
+- `while(condition) {script}` = Executa o *loop* caso a condição especificada retorne o valor booleano `true`.
+
+Uma boa forma de determinar um *ponto final* ao loop é criar uma variável e dentro do `{script}` adicionar uma instrução para que toda vez que o mesmo seja executado, essa variável mude. Exemplo:
+
+```
+var timer = 0;
+while(timer <= 10) {
+
+    console.log('Counting: ' + timer)
+    timer++
+}
+```
+
+No código acima, a variável `timer` começa em 0. Ao executar o `{script}`, o computador adiciona o valor '1' à essa variável (`timer++` é uma abreviação para `timer = timer + 1`, o mesmo pode ser feito no caso de subtração) e imprime no console.
+Quando `timer` atingir o valor '10', o loop é quebrado e o computador fica livre para executar as próximas linhas de código.
+
+*A condição pode ser armazenada dentro de uma variável e essa pode ser declarada nos loops.*
+
+- `for(variable; while; increment) {script}` = Funciona como o while, porém a declaração de condição fica ligeiramente diferente, podendo-se declarar a variável e o incremento no bloco de condição. Esse formato é muito mais comum de ser encontrado.
+
+- `break;` - Esse comando quebra um loop imediatamente ao ser executado.
+
+# Debug
+
+Este ainda é um tópico pouco conhecido pelo autor dessas notas. Conforme for adquirindo conhecimento sobre, serão adicionadas atualizações.
