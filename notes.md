@@ -14,7 +14,54 @@
 
 - `//` = Adiciona um comentário.
 
-- `${expression}` = Feita para ser usado em *strings*, essa sintaxe concatena uma *string* com uma expressão qualquer (ex.: variáveis). É necessária a utilização de crase.
+### Templates
+
+Para consulta mais detalhada, confira [esse artigo da Alura](https://www.alura.com.br/artigos/tagged-template-literals). feito pelo Paulo Scarlecio, sobre Tagged Template Literals.
+
+#### Literals
+
+- `${}` = Declarada dentro de uma *string* ``Lorem ipsum ${expression}}``, *Template Literals* é usada para interpolar (concatenar) uma *string* com outra expressão, podendo ser uma *string*, uma expressão numérica ou até mesmo uma variável. É necessário usar os *backtics* (acento grave) no lugar de aspas na declaração da *string* para que a chamada funcione. Exemplo:
+
+```
+const word = 'interpolated';
+console.log(`My ${word} Template Literal.`);
+
+//output: "My interpolated Template Literal."
+```
+
+#### Tagged
+
+A *Tagged Template* é a chamada de uma função feita através da utilização da *Template Literals*.
+
+Normalmente declaramos e chamamos uma função conforme explicado [aqui](#funções). Porém, ao utilizar *Tagged Template Literals*, a chamada de uma função ocorre assim:
+
+```
+fname`string as parameter`;
+```
+
+Ambas as chamadas não são equivalentes, ou seja, quando utilizamos *Tagged Template Literals* para realizar a chamada de uma função, a forma como passaremos um parâmetro varia de acordo com o tipo de valor usado.
+
+Por exemplo, quando a nossa Template Literal é composta por apenas uma string, nosso parâmetro é declarado como um *array*:
+
+```
+fname(['text as parameter']);
+fname`text as parameter`;
+```
+
+No caso acima, as chamadas são equivalentes. Porém, no caso da declaração como *array*, podemos concatenar valores de variáveis, confira o exemplo:
+
+```
+fName = (stringArray, word) =>{
+
+    console.log(`${stringArray[0]}${word}${stringArray[1]}`);
+}
+
+const word = 'alura';
+
+fName`I study at ${word} everyday.`;
+```
+
+Caso sinta a necessidade de mais detalhes e outros exemplos práticos, visite o link referenciado [lá em cima](#templates).
 
 ## Variáveis
 
@@ -60,7 +107,10 @@ Arrays são listas onde pode se guardar vários valores dentro de uma só variá
 
 ## Funções
 
-- `function <fName>(parameter) {fContent}` = Cria uma função. Adicione as instruções entre as chaves, qualquer parametro recebido entra entre parênteses;
+No Javascript, é possível criar nossas próprias funções, existem duas formas (conhecidas por quem vos fala) de fazer isso:
+
+1. `function <fName>(parameter) {fContent}` = Cria uma função. Adicione as instruções entre as chaves, qualquer parametro recebido entra entre parênteses;
+2. `fname = (parameter) => {fcontent}` = Declaração de função de forma simplificada.
 
 - `variable.replace(toBeReplaced, toReplace)` = A função `replace` recebe 2 parâmetros: o primeiro sendo o padrão que procuramos e o segundo o retorno que desejamos no local desse padrão. Em uma `string`, o `.replace` sempre vai procurar pela primeira ocorrência do padrão declarado, portanto, pode-se resolver esse problema utilizando a declaração `/toBeReplaced/g`, onde `g` informa ao Javascript que é necessário encontrar todas as ocorrências naquela `string`. Para mais informações, acesse este [guia de bolso](https://www.regular-expressions.info/refquick.html).
 
