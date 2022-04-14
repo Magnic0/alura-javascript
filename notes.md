@@ -105,14 +105,20 @@ Arrays são listas onde pode se guardar vários valores dentro de uma só variá
 
 - `parseFloat` = Converte um *string* para número racional.
 
-## Funções
+## Clases e Funções
 
-No Javascript, é possível criar nossas próprias funções, existem duas formas (conhecidas por quem vos fala) de fazer isso:
+### Funções
+
+No Javascript, é possível criarmos nossas próprias funções, existem duas formas (conhecidas por quem vos fala) de fazer isso:
 
 1. `function <fName>(parameter) {fContent}` = Cria uma função. Adicione as instruções entre as chaves, qualquer parametro recebido entra entre parênteses;
 2. `fname = (parameter) => {fcontent}` = Declaração de função de forma simplificada.
 
 - `variable.replace(toBeReplaced, toReplace)` = A função `replace` recebe 2 parâmetros: o primeiro sendo o padrão que procuramos e o segundo o retorno que desejamos no local desse padrão. Em uma `string`, o `.replace` sempre vai procurar pela primeira ocorrência do padrão declarado, portanto, pode-se resolver esse problema utilizando a declaração `/toBeReplaced/g`, onde `g` informa ao Javascript que é necessário encontrar todas as ocorrências naquela `string`. Para mais informações, acesse este [guia de bolso](https://www.regular-expressions.info/refquick.html).
+
+### Classes
+
+==work in progress==
 
 ## Operadores Lógicos.
 
