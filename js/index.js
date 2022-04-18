@@ -1,4 +1,4 @@
-// Fixed test program for alura-javascript courses codes
+// Iniciando curso de Javascript: primeiros passos com a linguagem.
 
 /* -1-
 console.log("Hello world!");

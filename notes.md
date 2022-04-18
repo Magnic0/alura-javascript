@@ -118,7 +118,30 @@ No Javascript, é possível criarmos nossas próprias funções, existem duas fo
 
 ### Classes
 
-==work in progress==
+*Classes* são templates que podem ser declarados pelo desenvolvedor para que a criação de **objetos** seja feita. Muito úteis em códigos repetitivos, as *classes* "encapsulam" dados com código, para que seja possível trabalhar com esses dados futuramente no mesmo código.
+
+- `class className{classContent}` = Declara uma *class*, tal qual seus parâmetros.
+
+Dentro de uma *class* também pode ser criada uma condição *if*. Veja um exemplo:
+
+```
+class className{
+
+    condition(parameter){
+
+        if(this.value >= parameter){
+
+            this.value -= parameter;
+        }
+    }
+}
+```
+
+O código de exemplo acima limita uma operação a ser executada somente se seu valor for maior ou igual a zero, bloqueando assim atribuições que o fariam ter um valor negativo.
+
+- `var varName = new className(parameter);` = Declara uma *class* dentro de uma variável, criando assim um **objeto**.
+
+- `object.classContent = 'string', 0000;` = Atribui valor a um dos parâmetros de um **objeto**.
 
 ## Operadores Lógicos.
 
