@@ -10,13 +10,23 @@ class client{
 class checkAcc{
 
     agency;
-    balance;
+    _balance = 0; //private attribute
     withdraw(value){
 
-        if(this.balance >= value){
+        if(value <= 0){ //verify if the withdraw value is positive
 
-            this.balance -= value;
+            return; //stops condition execution
         }
+        this._balance -= value;
+        return value;
+    }
+    deposit(value){
+
+        if(value <= 0){ //verify if deposit value is positive
+
+            return;
+        }
+        this._balance += value;
     }
 }
 
@@ -26,19 +36,22 @@ client1.name = 'Richard';
 client1.cpf = 19216810130;
 client1.rg = 456987326;
 checkAcc1.agency = 1001;
-checkAcc1.balance = 0;
 
 const client2 = new client();
-var checkAcc2 = new client();
+var checkAcc2 = new checkAcc();
 client2.name = 'Alice';
 client2.cpf = 15645675450;
 client2.rg = 330344780;
 checkAcc2.agency = 1001;
-checkAcc2.balance = 0;
 
-console.log('\n', client1, '\n\n', client2, '\n');
-console.log(`Richard's Balance: C$${checkAcc1.balance}\n`);
-checkAcc1.balance += 100;
-console.log(`Richard's Balance: C$${checkAcc1.balance}\n`);
-checkAcc1.withdraw(50);
-console.log(`Richard's Balance: C$${checkAcc1.balance}\n`);
+checkAcc1.deposit(150);
+const withdrawValue = checkAcc1.withdraw(50);
+console.log('Withdraw Value: US$', withdrawValue);
+
+console.log('\n', client1);
+console.log('\n', checkAcc1);
+
+console.log('\n', client2);
+console.log('\n', checkAcc2);
+
+console.log('');

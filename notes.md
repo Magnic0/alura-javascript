@@ -1,3 +1,7 @@
+# Introdução
+
+Olá! Esse arquivo é uma espécie de *caderno de anotações* direcionado aos meus estudos de Javascript. Caso você esteja procurando por um guia mais detalhado e completo, recomendo que visite a [documentação da linguagem](https://developer.mozilla.org/en-US/docs/Web/JavaScript).
+
 # Node.js
 
 - `REPL` significa *Read Eval Print Loop*, que representa um computer environment, como um console do Windows por exemplo. 
@@ -142,6 +146,12 @@ O código de exemplo acima limita uma operação a ser executada somente se seu 
 - `var varName = new className(parameter);` = Declara uma *class* dentro de uma variável, criando assim um **objeto**.
 
 - `object.classContent = 'string', 0000;` = Atribui valor a um dos parâmetros de um **objeto**.
+
+#### Atributos Privados
+
+No **Javascript**, ainda não existe uma forma oficial de criar atributos privados. Porém, no meio da programação, é comum que os desenvolvedores declarem atributos com `_` no início do nome, simbolizando que tais são privados e que não devem ser alterados diretamente.
+
+Caso tenha interesse, há uma página com propostas de implementação de uma sintaxe exclusiva para essa funcionalidade no Github, que você pode acessar [aqui](https://github.com/tc39/proposal-class-fields#private-fields).
 
 ## Operadores Lógicos.
 
