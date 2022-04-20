@@ -1,35 +1,5 @@
 // Iniciando o segundo dos cursos de Javascript: Programando a Orientação a Objetos.
 
-class client{
-
-    name;
-    cpf;
-    rg;
-}
-
-class checkAcc{
-
-    agency;
-    _balance = 0; //private attribute
-    withdraw(value){
-
-        if(value <= 0){ //verify if the withdraw value is positive
-
-            return; //stops condition execution
-        }
-        this._balance -= value;
-        return value;
-    }
-    deposit(value){
-
-        if(value <= 0){ //verify if deposit value is positive
-
-            return;
-        }
-        this._balance += value;
-    }
-}
-
 const client1 = new client();
 var checkAcc1 = new checkAcc();
 client1.name = 'Richard';
