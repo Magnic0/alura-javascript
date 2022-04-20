@@ -1,5 +1,8 @@
 // Iniciando o segundo dos cursos de Javascript: Programando a Orientação a Objetos.
 
+import { checkAcc } from "./modules/CheckAccount.js";
+import { client } from "./modules/Client.js";
+
 const client1 = new client();
 var checkAcc1 = new checkAcc();
 client1.name = 'Richard';

@@ -1,6 +1,6 @@
 // client class archive
 
-class client{
+export class client{
 
     name;
     cpf;

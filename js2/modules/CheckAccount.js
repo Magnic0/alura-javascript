@@ -1,6 +1,6 @@
 // Check Account archive
 
-class checkAcc{
+export class checkAcc{
 
     agency;
     _balance = 0; //private attribute
