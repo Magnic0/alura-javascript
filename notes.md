@@ -230,13 +230,23 @@ Quando `timer` atingir o valor '10', o loop é quebrado e o computador fica livr
 
 Os **Módulos** são uma forma de nós dissolvermos nossos códigos em diferentes arquivos, pra que assim sejam mais organizados e fáceis de acessar. Hoje, a maioria dos navegadores suportam essa funcionalidade.
 
-Para que seja feita a declaração de um **módulo**, é preciso crirar um `package.json` do arquivo principal (pode-se entrar o comando `npm init` para que o terminal gere esse arquivo) e informar que o mesmo é integrante de um sistema de **módulos**, através da instrução: `"type": "module"`.
+Para que seja feita a declaração de um **módulo** funcional usando o **Node.js**, é preciso crirar um `package.json` do arquivo principal (pode-se entrar o comando `npm init` para que o terminal gere esse arquivo) e informar que o mesmo é integrante de um sistema de **módulos**, através da configuração: `"type": "module"`.
 
 Ao criar funcionalidades em arquivos separados, precisamos disponibilizá-la para importação em outro arquivo.
 
 - `export` = Exporta a funcionalidade, permitindo incorporação em outro código. Essa sintaxe é usada na linha onde é declarada a funcionalidade (funções, classes, etc).
 
 - `import { exFunction } from "./path";` = Importa uma funcionalidade para o arquivo onde foi declarada. É necessário que seja declarada no arquivo informado como `"module"` no *.json*.
+
+## JavaScript Object Notation
+
+JSON, ou JavaScript Object Notation, é um formato de marcação e intercambiamento de dados entre arquivos JavaScript. Este formato é fácil de ler e escrever aos humanos, assim como é facilmente interpretado e gerado pelo computador.
+
+É muito importante que apreda-se a utilizar este formato de notação de objetos cedo, para que tenha-se uma base no desenvolvimento de algoritmos, visto que a maioria dos programas modernos carregam com si ao menos uma de suas funcionalidades.
+
+Para mais detalhes e consultas, visite o [site oficial do JSON](https://www.json.org/).
+
+- O arquivo `package.json` é um arquivo de configuração para um código. Cria-se esta configuração para especificar a usabilidadede um programa Javascript. Confira mais detalhes sobre este pacote [nessa página](https://docs.npmjs.com/cli/v8/configuring-npm/package-json).
 
 # Debug
 
