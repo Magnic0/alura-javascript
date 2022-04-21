@@ -67,6 +67,26 @@ fName`I study at ${word} everyday.`;
 
 Caso sinta a necessidade de mais detalhes e outros exemplos práticos, visite o link referenciado [lá em cima](#templates).
 
+## Tipos Primitivos
+
+**Tipos primitivos** são os mais simples valores nos quais uma linguagem consegue trabalhar, geralmente são implementados no **nível mais básico da linguagem**, o que significa que eles não são apresentados como **objetos**, ou seja: não possuem métodos ou atributos.
+
+Os tipos primitivos são um valor em sua forma mais simples de representação, além de serem imutáveis após a declaração.
+
+Os tipos primitivos do JavaScript são:
+
+- `String` = Funciona como texto.
+
+- `Number` = São valores numéricos.
+
+- `Boolean` = Retorna o valor *true* ou *false*.
+
+- `Symbol` = É um valor garantidamente único, usado para encapsular ou *esconder* informações. 
+
+- `undefined` = Aponta a falta de valor atribuído.
+
+- `null` = Funciona como o **undefined**, porém é um valor atribuido intencionalmente pelo desenvolvedor.
+
 ## Variáveis
 
 - `var <varName> = <varValue>` = Declara uma variável. Variável são valores que podem ser alterados no futuro.
@@ -237,6 +257,31 @@ Ao criar funcionalidades em arquivos separados, precisamos disponibilizá-la par
 - `export` = Exporta a funcionalidade, permitindo incorporação em outro código. Essa sintaxe é usada na linha onde é declarada a funcionalidade (funções, classes, etc).
 
 - `import { exFunction } from "./path";` = Importa uma funcionalidade para o arquivo onde foi declarada. É necessário que seja declarada no arquivo informado como `"module"` no *.json*.
+
+## Setters e Getters
+
+Os **setters** e **getters** são funções comuns de várias linguagens, tais quais o JavaScript. Sua utilidade se encontra no *encapsulamento* de propriedades.
+
+Por exemplo: queremos criar um **objeto** com uma **propriedade protegida**, ninguém poderá atribuir um valor que não seja dentro das especificações para aquela propriedade.
+Para isso, temos um **módulo**, onde há uma **classe**. Sendo assim, o valor desta propriedade precisa ser referente ao nosso **módulo**:
+
+```
+import { className } from "./ModuleName";
+
+class className2{
+
+    _exProperty;
+    get exProperty(value){
+
+        if(value instanceof className){
+
+            this._exProperty = value;
+        }
+    }
+}
+```
+
+O código acima **importa uma classe de um módulo**, declara uma nova classe com o **atributo privado** `_exProperty;` e um **getter** com uma **condição `if`** para que o valor atribuído futuramente a essa propriedade siga essa condição e não tenha valores indevidos.
 
 ## JavaScript Object Notation
 

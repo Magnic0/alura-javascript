@@ -1,10 +1,30 @@
 // Check Account archive
 
+import { client } from "./Client.js";
+
 export class checkAcc{
 
     agency;
-    client;
+
+    _client;
+    set client(newValue){
+
+        if(newValue instanceof client){
+
+            this._client = newValue;
+        }
+    }
+    get client(){
+
+        return this._client;
+    }
+
     _balance = 0; //private attribute
+    get balance(){
+
+        return this._balance;
+    }
+
     toWithdraw(value){
 
         if(value <= 0){ //verify if the withdraw value is positive
@@ -14,6 +34,7 @@ export class checkAcc{
         this._balance -= value;
         return value;
     }
+
     deposit(value){
 
         if(value <= 0){ //verify if deposit value is negative
@@ -22,6 +43,7 @@ export class checkAcc{
         }
         this._balance += value;
     }
+
     transfer(value, account){
 
         if(value > this._balance || value <= 0) { //verify if value transfered is negative or bigger than the balance
