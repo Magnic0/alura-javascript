@@ -30,7 +30,7 @@ checkAcc1.transfer((155), checkAcc2);
 //const withdrawValue = checkAcc1.toWithdraw(50);
 //console.log('Withdraw Value: US$', toWithdrawValue);
 
-//--------viewing checking accounts status--------
+//--------printing checking accounts status--------
 
 console.log('\n', checkAcc1);
 
