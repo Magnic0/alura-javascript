@@ -167,6 +167,8 @@ O código de exemplo acima limita uma operação a ser executada somente se seu 
 
 - `object.classContent = 'string', 0000;` = Atribui valor a um dos parâmetros de um **objeto**.
 
+- `static attributeName;` = Cria um atributo estático, tal qual pertence somente à classe em que é usada. Dica: ao checar este atributo, devemos referenciar a classe e não uma instância dessa classe. Deste modo:`className.attributeName`.
+
 #### Atributos Privados
 
 No **Javascript**, ainda não existe uma forma oficial de criar atributos privados. Porém, no meio da programação, é comum que os desenvolvedores declarem atributos com `_` no início do nome, simbolizando que tais são privados e que não devem ser alterados diretamente.

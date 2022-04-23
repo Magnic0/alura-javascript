@@ -36,7 +36,7 @@ var checkAcc2 = new checkAcc(
 checkAcc1.deposit(3000);
 checkAcc1.transfer((275), checkAcc2);
 //const withdrawValue = checkAcc1.toWithdraw(50);
-//console.log('Withdraw Value: US$', toWithdrawValue);
+//console.log('Withdraw Value: US$', withdrawValue);
 
 //--------printing checking accounts status--------
 
@@ -45,3 +45,5 @@ console.log('\n', checkAcc1);
 console.log('\n', checkAcc2);
 
 console.log('');
+
+console.log('We have now', checkAcc.accountNum, 'checking accounts.');
