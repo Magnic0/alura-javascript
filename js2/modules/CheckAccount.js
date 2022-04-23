@@ -4,8 +4,16 @@ import { client } from "./Client.js";
 
 export class checkAcc{
 
-    static accountNum = 0;
-    
+    static _accountNum = 0;
+    static get accountNum(){
+
+        return checkAcc._accountNum;
+    }
+    static set accountNum(count){
+
+        checkAcc._accountNum += count;
+    }
+
     agency;
 
     _client;
@@ -31,7 +39,7 @@ export class checkAcc{
 
         this.client = client;
         this.agency = agency;
-        checkAcc.accountNum += 1;
+        checkAcc.accountNum = 1;
     }
 
     toWithdraw(value){
