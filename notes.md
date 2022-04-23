@@ -260,7 +260,7 @@ Ao criar funcionalidades em arquivos separados, precisamos disponibilizá-la par
 
 ## Setters e Getters
 
-Os **setters** e **getters** são funções comuns de várias linguagens, tais quais o JavaScript. Sua utilidade se encontra no *encapsulamento* de propriedades.
+Os **setters** e **getters** são funções comuns entre várias linguagens, tais quais o JavaScript. Sua utilidade se encontra no *encapsulamento* de propriedades.
 
 Por exemplo: queremos criar um **objeto** com uma **propriedade protegida**, ninguém poderá atribuir um valor que não seja dentro das especificações para aquela propriedade.
 Para isso, temos um **módulo**, onde há uma **classe**. Sendo assim, o valor desta propriedade precisa ser referente ao nosso **módulo**:
@@ -282,6 +282,31 @@ class className2{
 ```
 
 O código acima **importa uma classe de um módulo**, declara uma nova classe com o **atributo privado** `_exProperty;` e um **getter** com uma **condição `if`** para que o valor atribuído futuramente a essa propriedade siga essa condição e não tenha valores indevidos.
+
+## Constructor
+
+**Constructor** é um método utilizado para inicializar e criar uma instância (objeto) de uma classe. Este é um método importante no quesito *encapsulamento de código*, pois o **constructor** pode estabelecer atributos de um objeto de forma a tais não serem mais alterados ao longo do código.
+
+No exemplo abaixo, temos um atributo no qual queremos estabelecer o valor somente na *construção*. Portanto, usaremos o método **constructor**: 
+
+```
+class className {
+
+    _attribute;
+    constructor(attribute) {
+
+    this._attribute = attribute;
+  }
+}
+```
+
+Assim, quando quisermos criar uma nova instância dessa classe, é só declararmos da seguinte forma:
+
+```
+const objectName = new className(attribute);
+```
+
+Caso queiramos *printar* este atributo em específico no console, podemos usar o `console.log(objectName.attribute);`.
 
 ## JavaScript Object Notation
 

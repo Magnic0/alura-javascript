@@ -25,6 +25,12 @@ export class checkAcc{
         return this._balance;
     }
 
+    constructor(client, agency){
+
+        this.client = client;
+        this.agency = agency;
+    }
+
     toWithdraw(value){
 
         if(value <= 0){ //verify if the withdraw value is positive
