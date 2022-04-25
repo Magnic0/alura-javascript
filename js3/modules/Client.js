@@ -1,16 +1,12 @@
-// client class archive
+// Client Data module
 
 export class client{
 
-    name;
-
-    _cpf;
     get cpf(){
         
         return this._cpf;
     }
 
-    _rg;
     get rg(){
 
         return this._rg;

@@ -1,0 +1,21 @@
+{
+  "name": "bytebank",
+  "version": "2.0.0",
+  "description": "Bytebank project for clients",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Magnic0/alura-javascript.git"
+  },
+  "author": "Nicolas",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Magnic0/alura-javascript/issues"
+  },
+  "homepage": "https://github.com/Magnic0/alura-javascript#readme"
+}

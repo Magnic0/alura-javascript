@@ -1,4 +1,4 @@
-// Check Account archive
+// Checking Account module
 
 import { client } from "./Client.js";
 
@@ -11,12 +11,8 @@ export class checkAcc{
     }
     static set accountNum(count){
 
-        checkAcc._accountNum += count;
+        checkAcc._accountNum = count;
     }
-
-    agency;
-
-    _client;
     set client(newValue){
 
         if(newValue instanceof client){
@@ -28,20 +24,17 @@ export class checkAcc{
 
         return this._client;
     }
-
-    _balance = 0; //private attribute
     get balance(){
 
         return this._balance;
     }
-
     constructor(client, agency){
 
-        this.client = client;
-        this.agency = agency;
-        checkAcc.accountNum = 1;
+        this._client = client;
+        this._agency = agency;
+        this._balance = 0;
+        checkAcc.accountNum += 1;
     }
-
     toWithdraw(value){
 
         if(value <= 0){ //verify if the withdraw value is positive
@@ -51,7 +44,6 @@ export class checkAcc{
         this._balance -= value;
         return value;
     }
-
     deposit(value){
 
         if(value <= 0){ //verify if deposit value is negative
@@ -60,7 +52,6 @@ export class checkAcc{
         }
         this._balance += value;
     }
-
     transfer(value, account){
 
         if(value > this._balance || value <= 0) { //verify if value transfered is negative or bigger than the balance

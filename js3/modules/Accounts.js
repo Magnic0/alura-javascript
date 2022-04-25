@@ -1,16 +1,5 @@
-//Savings Account Module
+export class account{
 
-export class savAcc{
-
-    static _accountNum = 0;
-    static get accountNum(){
-
-        return savAcc._accountNum;
-    }
-    static set accountNum(count){
-
-        savAcc._accountNum = count;
-    }
     get client(){
 
         return this._client;
@@ -35,7 +24,6 @@ export class savAcc{
         this._client = client;
         this._agency = agency;
         this._balance = initBalance;
-        savAcc._accountNum += 1;
     }
     toWithdraw(value){
 
