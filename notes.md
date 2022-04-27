@@ -175,6 +175,66 @@ No **Javascript**, ainda não existe uma forma oficial de criar atributos privad
 
 Caso tenha interesse, há uma página com propostas de implementação de uma sintaxe exclusiva para essa funcionalidade no Github, que você pode acessar [aqui](https://github.com/tc39/proposal-class-fields#private-fields).
 
+#### Herança (extends)
+
+No JavaScript, temos um sistema de **herança** entre códigos, de forma a possibilidar a utilização de uma classe existente em outro arquivo. A keyword `extends` é usada para fazer a declaração de classes que são *filhas* de outras classes.
+
+Assim, esse método permite que usemos um método, por exemplo, iguais aos existentes em outros arquivos do projeto, **sem precisar repetir** a declaração do mesmo.
+
+- `class classChild extends classParent` = Sintaxe para declaração de *classes filhas*.
+
+- `super(parameters)` = Acessa um atributo ou método da *classe mãe* **sobrescrito** na *classe filha*.
+
+#### Constructor
+
+**Constructor** é um método utilizado para inicializar e criar uma instância (objeto) de uma classe. Este é um método importante no quesito *encapsulamento de código*, pois o **constructor** pode estabelecer atributos de um objeto de forma a tais não serem mais alterados ao longo do código.
+
+No exemplo abaixo, temos um atributo no qual queremos estabelecer o valor somente na *construção*. Portanto, usaremos o método **constructor**: 
+
+```
+class className {
+
+    _attribute;
+    constructor(attribute) {
+
+    this._attribute = attribute;
+  }
+}
+```
+
+Assim, quando quisermos criar uma nova instância dessa classe, é só declararmos da seguinte forma:
+
+```
+const objectName = new className(attribute);
+```
+
+Caso queiramos *printar* este atributo em específico no console, podemos usar o `console.log(objectName.attribute);`.
+
+#### Setters e Getters
+
+Os **setters** e **getters** são funções comuns entre várias linguagens, tais quais o JavaScript. Sua utilidade se encontra no *encapsulamento* de propriedades.
+
+Por exemplo: queremos criar um **objeto** com uma **propriedade protegida**, ninguém poderá atribuir um valor que não seja dentro das especificações para aquela propriedade.
+Para isso, temos um **módulo**, onde há uma **classe**. Sendo assim, o valor desta propriedade precisa ser referente ao nosso **módulo**:
+
+```
+import { className } from "./ModuleName";
+
+class className2{
+
+    _exProperty;
+    get exProperty(value){
+
+        if(value instanceof className){
+
+            this._exProperty = value;
+        }
+    }
+}
+```
+
+O código acima **importa uma classe de um módulo**, declara uma nova classe com o **atributo privado** `_exProperty;` e um **getter** com uma **condição `if`** para que o valor atribuído futuramente a essa propriedade siga essa condição e não tenha valores indevidos.
+
 ## Operadores Lógicos.
 
 Os Operadores Lógicos são usados com operações com valores *boolean*, ou seja, `true` ou `false`. Os caracteres que representam os Operadores Lógicos são:
@@ -259,56 +319,6 @@ Ao criar funcionalidades em arquivos separados, precisamos disponibilizá-la par
 - `export` = Exporta a funcionalidade, permitindo incorporação em outro código. Essa sintaxe é usada na linha onde é declarada a funcionalidade (funções, classes, etc).
 
 - `import { exFunction } from "./path";` = Importa uma funcionalidade para o arquivo onde foi declarada. É necessário que seja declarada no arquivo informado como `"module"` no *.json*.
-
-## Setters e Getters
-
-Os **setters** e **getters** são funções comuns entre várias linguagens, tais quais o JavaScript. Sua utilidade se encontra no *encapsulamento* de propriedades.
-
-Por exemplo: queremos criar um **objeto** com uma **propriedade protegida**, ninguém poderá atribuir um valor que não seja dentro das especificações para aquela propriedade.
-Para isso, temos um **módulo**, onde há uma **classe**. Sendo assim, o valor desta propriedade precisa ser referente ao nosso **módulo**:
-
-```
-import { className } from "./ModuleName";
-
-class className2{
-
-    _exProperty;
-    get exProperty(value){
-
-        if(value instanceof className){
-
-            this._exProperty = value;
-        }
-    }
-}
-```
-
-O código acima **importa uma classe de um módulo**, declara uma nova classe com o **atributo privado** `_exProperty;` e um **getter** com uma **condição `if`** para que o valor atribuído futuramente a essa propriedade siga essa condição e não tenha valores indevidos.
-
-## Constructor
-
-**Constructor** é um método utilizado para inicializar e criar uma instância (objeto) de uma classe. Este é um método importante no quesito *encapsulamento de código*, pois o **constructor** pode estabelecer atributos de um objeto de forma a tais não serem mais alterados ao longo do código.
-
-No exemplo abaixo, temos um atributo no qual queremos estabelecer o valor somente na *construção*. Portanto, usaremos o método **constructor**: 
-
-```
-class className {
-
-    _attribute;
-    constructor(attribute) {
-
-    this._attribute = attribute;
-  }
-}
-```
-
-Assim, quando quisermos criar uma nova instância dessa classe, é só declararmos da seguinte forma:
-
-```
-const objectName = new className(attribute);
-```
-
-Caso queiramos *printar* este atributo em específico no console, podemos usar o `console.log(objectName.attribute);`.
 
 ## JavaScript Object Notation
 

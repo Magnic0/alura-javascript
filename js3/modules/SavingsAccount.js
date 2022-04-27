@@ -1,68 +1,27 @@
 //Savings Account Module
 
-export class savAcc{
+import { account } from "./Accounts.js";
 
-    static _accountNum = 0;
-    static get accountNum(){
+export class savAcc extends account{
 
-        return savAcc._accountNum;
+    static _savingsAccountNum = 0;
+    static get savingsAccountNum(){
+
+        console.log('We have now', savAcc._savingsAccountNum, 'savings accounts.');
+        return savAcc._savingsAccountNum;
     }
-    static set accountNum(count){
+    static set savingsAccountNum(count){
 
-        savAcc._accountNum = count;
+        savingsAcc._savingsAccountNum = count;
     }
-    get client(){
-
-        return this._client;
-    }
-    set client(newValue){
-
-        if(newValue instanceof client){
-
-            this._client = newValue;
-        }
-    }
-    get balance(){
-
-        return this._balance;
-    }
-    get agency(){
-
-        return this._agency;
-    }
+    
     constructor(client, agency, initBalance){
+
+        super(client, agency, initBalance);
 
         this._client = client;
         this._agency = agency;
         this._balance = initBalance;
-        savAcc._accountNum += 1;
-    }
-    toWithdraw(value){
-
-        if(value <= 0){ //verify if the withdraw value is positive
-
-            return; //stops condition execution
-        }
-        this._balance -= value;
-        return value;
-    }
-    deposit(value){
-
-        if(value <= 0){ //verify if deposit value is negative
-
-            return;
-        }
-        this._balance += value;
-        return value;
-    }
-    transfer(value, account){
-
-        if(value > this._balance || value <= 0) { //verify if value transfered is negative or bigger than the balance
-
-            return;
-        }
-        const withdrawValue = this.toWithdraw(value);
-        account.deposit(withdrawValue);
-        return value;
+        savAcc._savAccountNum += 1;
     }
 }
