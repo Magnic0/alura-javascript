@@ -1,6 +1,8 @@
 // Client Data module
 
-export class client{
+import { employee } from "../employees/Employee.js";
+
+export class client extends employee{
 
     get cpf(){
         
@@ -12,10 +14,13 @@ export class client{
         return this._rg;
     }
 
-    constructor(name, cpf, rg){
+    constructor(name, cpf, rg, password){
+
+        super(name, cpf, rg, password);
 
         this.name = name;
         this._cpf = cpf;
         this._rg = rg;
+        this._password = password;
     }
 }

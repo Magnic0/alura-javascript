@@ -1,12 +1,11 @@
-// Iniciando o segundo dos cursos de Javascript: Programando a Orientação a Objetos.
+// Starting the 3rd and last JavaScript basic courses of Alura.com.br
 
-//--------referencing all modules--------
+/* //--------referencing all account modules--------
 
-import { checkAcc } from "./modules/CheckAccount.js";
-import { client } from "./modules/Client.js";
-import { savAcc } from "./modules/SavingsAccount.js";
-import { account } from "./modules/Accounts.js";
-import { salaAcc } from "./modules/SalaryAccount.js";
+import { checkAcc } from "./modules/accounts/CheckAccount.js";
+import { client } from "./modules/accounts/Client.js";
+import { savAcc } from "./modules/accounts/SavingsAccount.js";
+import { salaAcc } from "./modules/accounts/SalaryAccount.js";
 
 //--------configuring checking accounts accounts--------
 
@@ -50,4 +49,40 @@ console.log('');
 
 console.log(testSal);
 
-console.log('');
+console.log(''); */
+
+//--------------------//--------------------//
+
+//-----referencing employee modules-----//
+
+import {client} from "./modules/accounts/Client.js"
+import { director } from "./modules/employees/Director.js"
+import { manager } from "./modules/employees/Manager.js"
+import { authSystem } from "./Authentication.js";
+
+const client1 = new client("Porter", 12313312365, "321");
+const director1 = new director("Carrie", 19746545618, 10000);
+
+client1.register("321");
+director1.register("1234");
+
+const isDirLogged = authSystem.login(director1, "1234");
+const isClientLogged = authSystem.login(client1, "321");
+
+if(isDirLogged){
+
+    console.log("\nWelcome director!\n");
+} else {
+
+    console.log("\nDirector isn't logged.\n");
+}
+
+console.log('--------------//--------------');
+
+if(isClientLogged){
+
+    console.log("\nWelcome client!\n");
+} else {
+
+    console.log("\nClient isn't logged.\n");
+}
