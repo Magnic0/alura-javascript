@@ -5,6 +5,8 @@
 import { checkAcc } from "./modules/CheckAccount.js";
 import { client } from "./modules/Client.js";
 import { savAcc } from "./modules/SavingsAccount.js";
+import { account } from "./modules/Accounts.js";
+import { salaAcc } from "./modules/SalaryAccount.js";
 
 //--------configuring checking accounts accounts--------
 
@@ -35,21 +37,17 @@ const account2 = new savAcc(
     50 //initial balance
 )
 
+const testSal = new salaAcc(client1);
+
 //--------operations--------
 
-account1.deposit(100);
-account1.toWithdraw(50);
-
-account2.toWithdraw(20);
+testSal.deposit(100);
+testSal.toWithdraw(10);
 
 //--------printing checking accounts status--------
 
 console.log('');
 
-console.log(account1);
-
-console.log(account2);
-
-console.log('');
+console.log(testSal);
 
 console.log('');

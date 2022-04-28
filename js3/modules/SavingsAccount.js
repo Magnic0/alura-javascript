@@ -7,7 +7,6 @@ export class savAcc extends account{
     static _savingsAccountNum = 0;
     static get savingsAccountNum(){
 
-        console.log('We have now', savAcc._savingsAccountNum, 'savings accounts.');
         return savAcc._savingsAccountNum;
     }
     static set savingsAccountNum(count){
@@ -23,5 +22,11 @@ export class savAcc extends account{
         this._agency = agency;
         this._balance = initBalance;
         savAcc._savAccountNum += 1;
+    }
+
+    toWithdraw(value){
+
+        let tax = 1.02;
+        return super._toWithdraw(value, tax);
     }
 }

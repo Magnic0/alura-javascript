@@ -2,6 +2,18 @@
 
 export class account{
 
+    constructor(client, agency, initBalance){
+
+        if(this.constructor == account){
+
+            throw new Error("\nYou shouldn't create a new object based on this abstract class!");
+        }
+
+        this._client = client;
+        this._agency = agency;
+        this._balance = initBalance;
+    }
+
     get client(){
 
         return this._client;
@@ -25,17 +37,9 @@ export class account{
         return this._agency;
     }
 
-    constructor(client, agency, initBalance){
+    toWithdraw(value){ //abstract method
 
-        this._client = client;
-        this._agency = agency;
-        this._balance = initBalance;
-    }
-
-    toWithdraw(value){
-
-        let tax = 1;
-        return this._toWithdraw(value, tax);
+        throw new Error('You are trying to call a abstract method! Instead, try calling from a child class.');
     }
 
     _toWithdraw(value, tax){

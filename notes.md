@@ -169,6 +169,27 @@ O código de exemplo acima limita uma operação a ser executada somente se seu 
 
 - `static attributeName;` = Cria um atributo estático, tal qual pertence somente à classe em que é usada. Dica: ao checar este atributo, devemos referenciar a classe e não uma instância dessa classe. Deste modo:`className.attributeName`.
 
+Existem também as **classes abstratas**, que são classes das quais não se pode instanciar um novo objeto. Caso essa classe tenha herdeiros, os mesmos podem ser instanciados há não ser que sejam também declarados como abstratos.
+
+A forma mais comum de se declarar uma classe abstrata é ativando uma tela de erro no momento da excução de um código cujo essa classe foi instanciada:
+
+```
+class account{
+
+    constructor(abstractClass){
+
+        if(this.constructor == abstractClass){
+
+            throw new Error("\nYou shouldn't instance a object from this class!");
+        }
+    }
+}
+```
+
+- A declaração `throw new Error();` para a execução do programa ao verificar a condição especificada. Pode-se também imprimir uma mensagem no momento do erro, assim facilitando o entendimento por parte do desenvolvedor que estiver trabalhando no código.
+
+- O mesmo conceito pode ser aplicado nos métodos de uma classe, criando assim **metodos abstratos**.
+
 #### Atributos Privados
 
 No **Javascript**, ainda não existe uma forma oficial de criar atributos privados. Porém, no meio da programação, é comum que os desenvolvedores declarem atributos com `_` no início do nome, simbolizando que tais são privados e que não devem ser alterados diretamente.
