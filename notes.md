@@ -133,10 +133,25 @@ Arrays são listas onde pode se guardar vários valores dentro de uma só variá
 
 ### Funções
 
-No Javascript, é possível criarmos nossas próprias funções, existem duas formas (conhecidas por quem vos fala) de fazer isso:
+No Javascript, podemos criar nossas próprias funções, tal qual podemos utilizar funções já existentes na linguagem. As funções são nossas amigas quando há a necessidade de uma funcionalidade especifica para solucionar problemas em nossos códigos.
 
-1. `function <fName>(parameter) {fContent}` = Cria uma função. Adicione as instruções entre as chaves, qualquer parametro recebido entra entre parênteses;
-2. `fname = (parameter) => {fcontent}` = Declaração de função de forma simplificada.
+- `function functionName(parameter) {functionContent;}` = Essa é a forma mais detalhada de declarar uma função.
+
+- `functionName = function(parameter) {functionContent;}` = Outra forma de declarar uma função.
+
+#### Arrow Functions
+
+Como uma forma de simplificar a sua declaração e adicionar propriedades úteis, temos as **Arrow Functions**. Elas são diferentes em sua declaração e possuem características próprias, mas fundamentalmente se comportam como funções.
+
+- `functionName = (parameter) => {functionContent;}` = Declara uma *Arrow Function*.
+
+Caso tenha somente uma declaração presente no conteúdo da *Arrow Function*, não é necessário tornar explicito o `return;`, pois o mesmo é automaticamente presente.
+
+Se for declarada sem nome dentro de uma variável, recebe o nome dessa variável para si:
+
+- `const variableName = (parameter) => {functionContent;}` = Declara uma *Arrow Function*, atribuíndo a uma variável e recebendo seu nome.
+
+#### Funções Predefinidas
 
 - `variable.replace(toBeReplaced, toReplace)` = A função `replace` recebe 2 parâmetros: o primeiro sendo o padrão que procuramos e o segundo o retorno que desejamos no local desse padrão. Em uma `string`, o `.replace` sempre vai procurar pela primeira ocorrência do padrão declarado, portanto, pode-se resolver esse problema utilizando a declaração `/toBeReplaced/g`, onde `g` informa ao Javascript que é necessário encontrar todas as ocorrências naquela `string`. Para mais informações, acesse este [guia de bolso](https://www.regular-expressions.info/refquick.html).
 
